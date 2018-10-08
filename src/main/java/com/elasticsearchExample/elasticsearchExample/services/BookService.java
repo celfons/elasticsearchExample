@@ -13,13 +13,8 @@ import java.util.List;
 @Service
 public class BookService implements BookContract {
 
-    private BookRepository bookRepository;
-
     @Autowired
-    public void setBookRepository(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
-
+    private BookRepository bookRepository;
 
     public Book save(Book book) {
         return bookRepository.save(book);
